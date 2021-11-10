@@ -341,7 +341,8 @@ export class ProductEditComponent implements OnInit, OnDestroy {
           ),
           TaxCodeCategory: new FormControl(
             _get(superHSProduct.Product, 'xp.Tax.Category', null),
-            Validators.required
+            //Validators.required
+            null
           ),
           TaxCode: new FormControl(
             _get(superHSProduct.Product, 'xp.Tax.Code', null),
@@ -468,7 +469,7 @@ export class ProductEditComponent implements OnInit, OnDestroy {
 
   setNonRequiredFields(): void {
     const optionalFieldsArray = [
-      'TaxCodeCategory',
+      //'TaxCodeCategory',
       'TaxCode',
       'ShipWeight',
       'ShipFromAddressID',
@@ -509,7 +510,7 @@ export class ProductEditComponent implements OnInit, OnDestroy {
       this.isShippingValid() &&
       this.unitOfMeasureValid() &&
       this.productForm.controls.Name.valid &&
-      this.productForm.controls.TaxCodeCategory.valid &&
+      //this.productForm.controls.TaxCodeCategory.valid &&
       this.productForm.controls.TaxCode.valid
     )
   }
