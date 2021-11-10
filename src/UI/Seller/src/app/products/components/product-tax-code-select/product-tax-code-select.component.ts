@@ -60,7 +60,7 @@ export class ProductTaxCodeSelect {
   taxSelectionsValid(): boolean {
     return (
       this.isCreatingNew &&
-      this.isRequired &&
+      //this.isRequired &&
       this.productForm.controls['TaxCode'].valid
     )
   }
